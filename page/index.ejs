@@ -1,0 +1,21 @@
+<%- include("header.ejs") %>
+<h1>index</h1>
+<form action="/" method="POST">
+    username <input type="text" name="username"><br/>
+    password <input type="password" name="password"><br/>
+    <input type="submit">
+</form>
+<h2>
+    <%= time %>
+</h2>
+<script src="test.js"></script>
+<% 
+if(blogs.length){ 
+    blogs.forEach(article => {
+%>
+    <%= article.title %><BR />
+<% 
+    }); 
+} 
+%>
+<%- include("footer.ejs") %>
